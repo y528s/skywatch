@@ -1,0 +1,84 @@
+/* ── Reset ── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  overflow-x: hidden;
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* ── Theme Variables ── */
+[data-theme="dark"] {
+  --bg: #000000;
+  --fg: #00ff96;
+  --fg-dim: rgba(0, 255, 150, 0.5);
+  --fg-muted: rgba(0, 255, 150, 0.25);
+  --accent: #00ff96;
+  --surface: rgba(0, 255, 150, 0.06);
+  --surface-border: rgba(0, 255, 150, 0.15);
+  --error: #ff4444;
+  --warning: #ffb300;
+  --text-primary: #00ff96;
+  --text-secondary: rgba(0, 255, 150, 0.6);
+  --header-weight: 900;
+}
+
+[data-theme="light"] {
+  --bg: #ffffff;
+  --fg: #0a1628;
+  --fg-dim: rgba(10, 22, 40, 0.5);
+  --fg-muted: rgba(10, 22, 40, 0.2);
+  --accent: #0057ff;
+  --surface: rgba(10, 22, 40, 0.04);
+  --surface-border: rgba(10, 22, 40, 0.12);
+  --error: #d32f2f;
+  --warning: #f57c00;
+  --text-primary: #0a1628;
+  --text-secondary: rgba(10, 22, 40, 0.6);
+  --header-weight: 900;
+}
+
+/* ── Keyframes ── */
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+@keyframes ping {
+  0% {
+    transform: scale(0.8);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(2.5);
+    opacity: 0;
+  }
+}
+
+@keyframes scan {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+@keyframes rotate-sweep {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* ── Base Transitions ── */
+[data-theme] {
+  background-color: var(--bg);
+  color: var(--fg);
+  transition: background-color 300ms ease, color 300ms ease;
+}

@@ -1,0 +1,17 @@
+{
+  "name": "Skywatch",
+  "short_name": "Skywatch",
+  "description": "Overhead flight display",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "landscape",
+  "theme_color": "#000000",
+  "background_color": "#000000",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
