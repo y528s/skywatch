@@ -294,7 +294,7 @@ export default function DisplayScreen({
               <PingRings />
               <PlaneSvg
                 heading={nearest.heading || 0}
-                size={Math.min(window?.innerWidth * 0.1 || 80, 100)}
+                size={80}
               />
             </div>
 
